@@ -9,9 +9,11 @@ class ClassComponent extends React.Component {
             <div className = "wrapper">
                 <div>
                     <h1> CLARUSWAY </h1>
+
                     <p>Class Component</p>
 
                     <h3>My number is {this.state.number}</h3>
+                    
                     <p>{this.props.surname}</p>
                     
                 </div>

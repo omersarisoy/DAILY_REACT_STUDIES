@@ -18,15 +18,15 @@ class EventBind extends Component {
    * 5. send argument to event handler
    */
 
-  // handleClick(){
-  //   this.setState({message: "Goodbye!"})
-  //   console.log("this: ", this);
-  // }[1,2,3]
+ /*  handleClick(){
+    this.setState({message: "Goodbye!"})
+    console.log("this: ", this);
+  } *//* {[1,2,3]} */
 
-  // handleClick = () => {
-  //   this.setState({ message: "Goodbye!" });
-  //   console.log("this: ", this);
-  // } [4]
+  handleClick = () => {
+    this.setState({ message: "Goodbye!" });
+    console.log("this: ", this);
+  } /* {[4]} */
 
   // handleClick(name){
   //   this.setState({message: `Goodbye! ${name}`})
@@ -37,12 +37,17 @@ class EventBind extends Component {
     return (
       <div>
         <p>{this.state.message}</p>
-        {/* <button onClick={this.handleClick.bind(this)}>click</button> */}{" "}
+
+        {/* <button onClick={this.handleClick.bind(this)}>click</button> */}
         {/* [1] */}
-        {/* <button onClick={() => this.handleClick()}>click</button> */}{" "}
+
+        {/* <button onClick={() => this.handleClick()}>click</button> */}
         {/* [2] */}
-        {/* <button onClick={this.handleClick}>click</button> */} {/* [3] */}
-        {/* <button onClick={() => this.handleClick("Roy")}>click</button> */}{" "}
+        
+        {/* <button onClick={this.handleClick}>click</button>  */}
+        {/* [3,4] */}
+
+        {/* <button onClick={() => this.handleClick("Roy")}>click</button> */}
         {/* [5] */}
       </div>
     );

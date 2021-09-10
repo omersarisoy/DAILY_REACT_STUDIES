@@ -8,4 +8,5 @@ const ModuleBtn = ({btnClass, btnName}) => {
     )
 }
 
+
 export default ModuleBtn;
