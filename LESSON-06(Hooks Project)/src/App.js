@@ -22,7 +22,7 @@ function App() {
     axios.get("https://jsonplaceholder.typicode.com/users")
     // .then(response => console.log(response))
     .then(res => setStudentsList(res.data))
-  }, [])
+  }, []) // [] sadece sayfa açıldığında apiden gelen dataları render etsin.
 
   const handleText =(e)=> {
     setText(e.target.value)
@@ -34,15 +34,16 @@ function App() {
 
   const filteredStudents = useMemo(()=> studentsList.filter(student => {
     return student.name.toLowerCase().includes(search.toLocaleLowerCase())
-  }),[search,studentsList]) 
+  }),[search,studentsList]) // useEffect de olduğu gibi useMemo'da da dependancy kullanıyoruz.
 
   
 
-  // useMemo değeri hafızaya alır ve  gereksiz render etmeyi engeller. Burada olduğu gibi biz ne zaman istersek o zaman render edildi. Yani search ve studentList dependancy olarak geçtiğinde. 
-
+  // useMemo hafızaya alınmış değeri döndürür. Değeri hafızaya alır ve  gereksiz render etmeyi engeller. Props geçtiğimiz List componentine React.memo tanımlayınca kendisini ilgilendirdiği için rerender ediyordu. UseMemo kullandığımızda List de değişiklik olsa bile render etmiyor. Yani burada olduğu gibi biz ne zaman istersek (search ve studentList dependancy olarak geçtiğimizde) o zaman render edildi.   
 
   
   const add = useCallback(()=> {setStudentsList([...studentsList, {id: studentsList.length + 1 , name:text}])},[text, studentsList]) 
+
+  // hafızaya alınmış callback fonksiyonu döndürür.
 
   // console.log(studentsList)
   
@@ -70,6 +71,7 @@ function App() {
 
       <button onClick={handleSearch} >Search </button>
 
+      {/* <List students={studentsList} add={add}/> */}
       <List students={filteredStudents} add={add}/>
 
 

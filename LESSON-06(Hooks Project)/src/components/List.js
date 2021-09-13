@@ -8,6 +8,7 @@ const List = React.memo(({ students, add }) => {
       <button onClick={()=> add()}>ADD</button>
 
       {students?.map((student) => {
+        // ? =>>> optional chaining
         return <ListItem key={student.id} student={student} add={add} />;
       })}
     </div>
