@@ -14,6 +14,8 @@ const Navbar = (props) => {
               <button className="ui button" > <NavLink to="/about">About</NavLink></button>
 
               <button className="ui button" > <NavLink to="/contact">Contact</NavLink></button>
+
+            {/* "href",Link to veya Navlink to kısmına yazdığımız kısım yukarıda URL kısmında yazar. About butonuna tıkladığımızda About sayfasında yazanları getirmek için hem Lİnk to içindeki url hem de path deki url aynı olmalı*/}
           </div>
 
       </nav>

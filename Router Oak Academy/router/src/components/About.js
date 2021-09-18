@@ -18,7 +18,6 @@ const About = () => {
       >
         <h3 className="ui header">About</h3>
         <p>
-          {" "}
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum,
           dolores?
         </p>

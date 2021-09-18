@@ -14,7 +14,6 @@ const Contact = (props) => {
           ÖMER
         </Link>
         <p>
-          {" "}
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum,
           dolores?
         </p>
@@ -28,7 +27,6 @@ const Contact = (props) => {
           SONER
         </Link>
         <p>
-          {" "}
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum,
           dolores?
         </p>
